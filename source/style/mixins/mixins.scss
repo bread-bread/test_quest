@@ -1,0 +1,62 @@
+%clearfix {
+  &:after,
+  &:before {
+    content: "";
+    display: block;
+    clear: both;
+  }
+}
+//- центровка блока
+@mixin centered($axis: 'both') {
+  position: absolute;
+  @if $axis=='x' {
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  @if $axis=='y' {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  @if $axis=='both' {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+@mixin webissimo(){
+    font-family: 'webissimo', serif;
+}
+@mixin roboto($weight) {
+    font-family: 'roboto-'+$weight;
+}
+// adaptive
+
+@mixin desctopFHD {
+  @media (max-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin desctop {
+  @media (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (max-width: 992px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: 768px) {
+    @content;
+  }
+}
+
+@mixin phone {
+  @media (max-width: 480px) {
+    @content;
+  }
+}
