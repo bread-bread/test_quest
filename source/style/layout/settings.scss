@@ -4,12 +4,9 @@ body, html {
 }
 html {
     font-size: 16px;
-    @include phone {
-        font-size: 14px;
-    }
 }
 body {
-    font-family: "Roboto", Arial, sans-serif;
+    font-family: 'gotham-medium', Arial, sans-serif;
 	line-height: 1.42;
 	-webkit-font-smoothing: antialiased;
 }
@@ -17,9 +14,19 @@ body {
     box-sizing: border-box;
 }
 .wrapper {
-    min-height: 100%;
+    height: 100%;
     position: relative;
     overflow: hidden;
+    width: 100%;
+    background:
+    repeating-linear-gradient(
+        135deg, 
+        $red, $red 5px, 
+        $light_red 0, $light_red 10px);
+}
+h1 {
+    margin: 0;
+    padding: 0;
 }
 ul {
     margin: 0;

@@ -1,0 +1,400 @@
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 160px;
+    width: 50%;
+    background-color: rgba(0,0,0,.1);
+    @include h980 {
+        height: 125px;
+    }
+}
+.nav-trigger {
+    position: absolute;
+    left: 44px;
+    top: -18px;
+}
+.nav-trigger__img {
+    width: 86px;
+}
+.title {
+    left: 150px;
+    right: 50px;
+    @include centered('y');
+
+}
+.title__img {
+    width: 100%;
+}
+.about {
+    width: 50%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+}
+.info {
+    position: absolute;
+    top: 175px;
+    width: 100%;
+    padding: 0 45px;
+    @extend %clearfix;
+    @include h980 {
+        top: 140px;
+    }
+}
+.info__logo {
+    float: left;
+}
+.info__logo-img {
+    height: 46px;
+    @include w1600 {
+        height: 34px;
+    }
+    @include w1200 {
+        height: 30px;
+    }
+}
+.info__date {
+    float: right;
+    font-family: 'gotham-medium';
+    font-size: 28px;
+    text-transform: uppercase;
+    color: $main_color;
+    @include w1600 {
+        font-size: 21px;
+    }
+    @include w1200 {
+        font-size: 18px;
+    }
+}
+.wrap {
+    position: absolute;
+    top: 205px;
+    left: 40px;
+    right: 40px;
+    bottom: 150px;
+    @include h980 {
+        top: 190px;
+    }
+}
+.prediction, 
+.questions {
+    text-align: center;
+}
+.prediction {
+    @include centered('y');
+}
+.questions {
+    display: none;
+    top: 70px;
+    width: 100%;
+    @include centered('x');
+    @include h980 {
+        top: 20px;
+    }
+}
+
+.prediction__bg {
+    padding: 0 20%;
+    @include w1200 {
+        padding: 0 15%;
+    }
+}
+.prediction__bg-img {
+    height: auto;
+    width: 100%;
+}
+.prediction__desc {
+    margin: 20px auto 47px;
+    position: relative;
+    @include w1600 {
+        margin: 20px auto 20px;
+    }
+    @include h800 {
+        margin: 20px auto 20px;
+    }
+}
+.prediction__text {
+    font-family: 'cochin-italic';
+    font-size: 2.34vw;
+    font-style: italic;
+    text-transform: uppercase;
+    color: $main_color;
+    @include centered();
+    @include w1200 {
+        font-size: 2.2vw;
+    }
+}
+.prediction__button {
+    background-color: $main_color;
+    padding: 10px;
+    display: inline-block;
+    border-radius: 14px;
+    @include h800 {
+        padding: 8px;
+        border-radius: 12px;
+    }
+}
+.prediction__button-text {
+    color: $red;
+    font-size: 23px;
+    text-transform: uppercase;
+    border: 2px dotted $red;
+    padding: 8px 31px;
+    border-radius: 10px;
+    transition: .3s;
+    @include h800 {
+        padding: 5px 25px;
+        border-radius: 8px;
+    }
+}
+.prediction__button:hover {
+    .prediction__button-text {
+        color: $main_color;
+        background-color: $red;
+    }
+}
+.questions__title {
+    font-family: 'cochin-italic';
+    font-size: 51px;
+    font-style: italic;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 52px;
+    @include w1600 {
+        font-size: 32px;
+    }
+    @include w1200 {
+        font-size: 28px;
+    }
+    @include h980 {
+        margin-bottom: 45px;
+    }
+    &::after {
+        content: '';
+        display: block;
+        margin: 0 auto;
+        width: 50%;
+        height: 22px;
+        background-image: url('../img/decor/line_smail.png');
+        background-position: center;
+        background-repeat: no-repeat;
+        margin-top: 65px;
+        @include h980 {
+            margin-top: 20px;
+        }
+    }
+}
+.questions__item {
+    margin-bottom: 47px;
+    @include h980 {
+        margin-bottom: 35px;
+    }
+}
+.questions__link {
+    font-family: 'gotham-light';
+    text-transform: uppercase;
+    color: $main-color;
+    font-size: 28px;
+    padding: 12px 20px;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    position: relative;
+    transition: border 0.3s;
+    @include w1600 {
+        font-size: 21px;
+    }
+    @include w1200 {
+        font-size: 16px;
+    }
+    &::before,
+    &::after {
+        content: '';
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        top: 50%;
+        @include centered('y');
+        transition: .3s;
+    }
+    &::before {
+        left: 0;
+        margin-left: -6px;
+    }
+    &::after {
+        right: 0;
+        margin-right: -6px;
+    }
+    &:hover {
+        &::before,
+        &::after {
+            background-color: $main_color;
+        }
+        border: 2px solid $main-color;
+        font-weight: 600;
+    }
+}
+.photo {
+    position: fixed;
+    width: 50%;
+    top: 0;
+    bottom: 0;
+    right: 0;
+}
+.photo__wrap {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+}
+.photo__img {
+    height: 100%;
+}
+.reasons {
+    display: block;
+    position: absolute;
+    left: 85px;
+    bottom: 75px;
+    width: 270px;
+    height: 270px;
+    z-index: 2;
+    @include w1600 {
+        left: 75px;
+        width: 250px;
+        height: 250px;
+    }
+    @include w1200 {
+        width: 200px;
+        height: 200px;
+    }
+}
+.reasons__img {
+    width: 100%;
+    height: auto;
+}
+
+.footer {
+    background-color: rgba(0,0,0,.1);
+    @extend %clearfix;
+    height: 74px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.footer__left,
+.footer__right {
+    width: 50%;
+    float: left;
+}
+.footer__left {
+    padding: 11px 0;
+}
+.footer__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 100%;
+}
+.know-more {
+    color: $main-color;
+    text-transform: uppercase;
+    font-size: 19px;
+    margin-left: 25px;
+    margin-right: 32px;
+    @include w1600 {
+        font-size: 16px;
+        margin-left: 15px;
+        margin-right: 15px;
+    }
+}
+.socials, 
+.know-more {
+    display: block;
+    float: left;
+    margin-top: 15px;
+}
+.socials__item {
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 0;
+    margin-right: 17px;
+    @include w1600 {
+        margin-right: 10px;
+    }
+    @include w1200 {
+        margin-right: 5px;
+    }
+}
+.socials__icon {
+    width: 25px;
+    height: 25px;
+    fill: $main-color;
+}
+.buy-ticket {
+    background-color: $main_color;
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 7px;
+    border-radius: 10px;
+    margin-right: 50px;
+    @include w1600 {
+        margin-right: 15px;
+    }
+    @include w1200 {
+        margin-right: 0;
+        padding: 5px;
+        border-radius: 8px;
+        margin-top: 7px;
+    }
+}
+.buy-ticket__text {
+    color: $red;
+    font-size: 13px;
+    font-family: 'gotham-bold';
+    text-transform: uppercase;
+    border: 2px dotted $red;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: .3s;
+    @include w1200 {
+        font-size: 10px;
+        padding: 6px 10px;
+        border-radius: 8px;
+    }
+}
+.buy-ticket:hover {
+    .buy-ticket__text {
+        color: $main_color;
+        background-color: $red;
+    }
+}
+.copyright {
+    font-size: 10px;
+    color: $main-color;
+    font-family: 'gotham-light';
+    margin-left: 18px;
+    @extend %clearfix;
+    @include w1200 {
+        font-size: 8px;
+    }
+}
+.copyright__hearst {
+    display: inline-block;
+    vertical-align: baseline;
+    margin-right: 35px;
+}
+.copyright__wb,
+.copyright__age {
+    display: inline-block;
+    vertical-align: baseline;
+}
+.copyright__age {
+    margin-left: 10px;
+    font-size: 23px;
+}

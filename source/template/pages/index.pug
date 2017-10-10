@@ -1,0 +1,53 @@
+extends ../_template
+
+block variables
+  - var title = 'До встречи с тобой'
+  - var socials = [ 'in', 'yt' , 'ok', 'vk', 'tw', 'fb']
+  - var questions = ['Когда он сделает мне предложение?', 'Когда я встречу свою любовь?', 'Когда он сделает мне предложение?', 'Когда я встречу свою любовь?', 'Когда он сделает мне предложение?']
+
+block content
+    header.header
+        a.nav-trigger(href="#")
+            img.nav-trigger__img(src='./assets/img/decor/menu.svg')
+        .title
+            img.title__img(src="./assets/img/decor/title.png")
+    .about
+        .info
+            .info__logo
+                img.info__logo-img(src="./assets/img/decor/logo_womans.svg")
+            .info__date В кино с 7 июля
+        .wrap
+            .prediction
+                .prediction__desc
+                    .prediction__bg
+                        img.prediction__bg-img(src="./assets/img/decor/rounded_dec.svg")
+                    .prediction__text что ждет тебя этим летом? получи свое любовное предсказание
+                a.prediction__button(href="#")
+                    .prediction__button-text Узнать
+            .questions
+                .questions__title Что ты хочешь узнать?
+                ul.questions__list
+                    each item in questions
+                        li.questions__item
+                            a.questions__link #{item}
+    .photo
+        a.reasons(href="#")
+            img.reasons__img(src="./assets/img/decor/5_reasons.svg")
+        .photo__wrap
+            img.photo__img(src="./assets/img/content/cover_book.png")
+    footer.footer
+        .footer__left
+            a.know-more(href="#") Узнать больше
+            ul.socials
+                each item in socials
+                    li.socials__item
+                        a(href="#" class="socials__link")
+                            svg.socials__icon
+                                use(xlink:href=`./assets/img/icons/sprite.svg#${item}`)
+            a.buy-ticket(href="#") 
+                .buy-ticket__text Купить билет
+        .footer__right
+            .copyright
+                .copyright__hearst &copy; 2016 Hearst Shkulev Media, Woman’s Network
+                .copyright__wb &copy; 2016 Warner Bros. Entertainment, Inc. and Metro-Goldwyn-Mayer Pictures Inc. All Rights Reserved.
+                .copyright__age 16+

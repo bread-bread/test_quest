@@ -23,40 +23,34 @@
     transform: translate(-50%, -50%);
   }
 }
-@mixin webissimo(){
-    font-family: 'webissimo', serif;
-}
-@mixin roboto($weight) {
-    font-family: 'roboto-'+$weight;
-}
 // adaptive
 
-@mixin desctopFHD {
-  @media (max-width: 1800px) {
+@mixin w1600 {
+  @media (max-width: 1600px) {
     @content;
   }
 }
 
-@mixin desctop {
+@mixin w1200 {
   @media (max-width: 1200px) {
     @content;
   }
 }
 
-@mixin laptop {
-  @media (max-width: 992px) {
+@mixin h980 {
+  @media (max-height: 980px) {
     @content;
   }
 }
 
-@mixin tablet {
-  @media (max-width: 768px) {
+@mixin h800 {
+  @media (max-height: 800px) {
     @content;
   }
 }
 
-@mixin phone {
-  @media (max-width: 480px) {
+@mixin h720 {
+  @media (max-width: 720px) {
     @content;
   }
 }
