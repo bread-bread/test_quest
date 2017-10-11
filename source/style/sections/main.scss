@@ -379,22 +379,26 @@
     color: $main-color;
     font-family: 'gotham-light';
     margin-left: 18px;
+    padding-bottom: 5px;
     @extend %clearfix;
     @include w1200 {
         font-size: 8px;
     }
 }
+.copyright__text {
+    float: left;
+}
 .copyright__hearst {
-    display: inline-block;
-    vertical-align: baseline;
-    margin-right: 35px;
+    @include w1200 {
+        margin-bottom: 2px;
+    }
 }
-.copyright__wb,
+
 .copyright__age {
-    display: inline-block;
-    vertical-align: baseline;
-}
-.copyright__age {
-    margin-left: 10px;
+    margin-right: 15px;
     font-size: 23px;
+    float: right;
+    @include w1200 {
+        font-size: 20px;
+    }
 }
